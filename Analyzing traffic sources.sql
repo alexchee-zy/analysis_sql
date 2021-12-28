@@ -39,7 +39,7 @@ ORDER BY num_sessions DESC;
 
 -- 4. Traffic source trending (breakdown top traffic sources into week)
 SELECT 
-	-- weekofyear(created_at) as num_week, -- Monday as the beginning of the week 
+    -- weekofyear(created_at) as num_week, Monday as the beginning of the week 
     -- week/yearweek(created_at) as num_week, in which Sunday as the start of week
     MIN(DATE(created_at)) AS week_start_date,
     COUNT(DISTINCT website_session_id) AS num_sessions
